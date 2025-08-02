@@ -18,4 +18,21 @@ class RouteNames {
 
   // Teacher Screens Route Names
   static const String teacherHome = '/teacherHome';
+  static const String pendingJoinRequests = '/pendingJoinRequests';
+  static const String createNewBatch = '/createNewBatch';
+  static const String myBatches = '/myBatches';
+  static const String sendAnnouncements = '/sendAnnouncements';
+  static const String selectStudentsForAnnouncements =
+      '/selectStudentsForAnnouncements';
+  static const String teacherNotifications = '/teacherNotifications';
+  static const String teacherBatchDetails = '/teacherBatchDetails';
+  static const String teacherBlogDetails = '/teacherBlogDetails';
+  static const String teacherOwnBlogDetails = '/teacherOwnBlogDetails';
+  static const String createCurriculumTopic = '/createCurriculumTopic';
+  static const String manageCurriculums = '/manageCurriculums';
+  static const String myFollowers = '/myFollowers';
+  static const String teacherProfile = '/teacherProfile';
+  static const String uploadNotes = '/uploadNotes';
+  static const String teacherSavedBlogs = '/teacherSavedBlogs';
+  static const String teacherBlogs = '/teacherBlogs';
 }

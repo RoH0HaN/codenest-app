@@ -91,4 +91,39 @@ class AppTexts {
   static const myBatches = "My Batches";
   static const manageCurriculums = "Manage Curriculums";
   static const manage = "Manage";
+
+  // Teacher Pending Join Requests Screen texts
+  static const pendingJoinRequests = "Pending Join Requests";
+
+  // Teacher Create New Batch Screen texts
+  static const createNewBatchTitle = "Create a New Learning Batch";
+  static const createNewBatchSubtitle =
+      "Define your batch details and get started with structured teaching. Share the batch code with students to let them join easily.";
+  static const createBatchImageHint =
+      "Before a single topic is taught, before a single student joins, your batch makes its first impression.\nA thumbnail quietly says, “This is what we’re about.”\nChoose an image that reflects your batch’s spirit.";
+  static const batchName = "Batch Name";
+  static const batchNameHint = "Enter batch name";
+  static const batchCode = "Batch Code";
+  static const batchCodeHint = "Enter an unique batch code";
+  static const batchCategory = "Batch Category";
+  static const batchCategoryHint = "Select batch category";
+  static const startDate = "Start Date";
+  static const endDate = "End Date";
+  static const batchDescription = "Batch Description";
+  static const batchDescriptionHint = "Enter batch description";
+  static const create = "Create";
+
+  // Teacher Send Announcements Screen texts
+  static const sendAnnouncementsTitle = "Send a New Announcements";
+  static const sendAnnouncementsSubtitle =
+      "Keep your students in the loop. Share updates, reminders, or important messages instantly with your enrolled batches.";
+  static const notificationTitle = "Notification Title";
+  static const notificationTitleHint = "Enter notification title";
+  static const notificationDescription = "Notification Description";
+  static const notificationDescriptionHint = "Enter notification description";
+  static const next = "Next";
+
+  // Teacher Select Student For Announcements Screen texts
+  static const searchStudentsHint =
+      "Search students by name, email or phone...";
 }
