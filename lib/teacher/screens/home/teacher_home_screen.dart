@@ -76,37 +76,40 @@ class TeacherHomeScreen extends StatelessWidget {
                     const SizedBox(
                       width: 10,
                     ),
-                    Container(
-                      height: 70,
-                      width: 70,
-                      decoration: BoxDecoration(
-                        border: Border.all(color: context.successColor),
-                        color: context.successColor.withOpacity(0.15),
-                        borderRadius: BorderRadius.circular(5),
-                      ),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          SvgPicture.asset(
-                            height: 24,
-                            width: 24,
-                            AppIcons.eyeOpen,
-                            colorFilter: ColorFilter.mode(
-                              context.successColor,
-                              BlendMode.srcIn,
+                    InkWell(
+                      onTap: () => Get.toNamed(RouteNames.pendingJoinRequests),
+                      child: Container(
+                        height: 70,
+                        width: 70,
+                        decoration: BoxDecoration(
+                          border: Border.all(color: context.successColor),
+                          color: context.successColor.withOpacity(0.15),
+                          borderRadius: BorderRadius.circular(5),
+                        ),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SvgPicture.asset(
+                              height: 24,
+                              width: 24,
+                              AppIcons.eyeOpen,
+                              colorFilter: ColorFilter.mode(
+                                context.successColor,
+                                BlendMode.srcIn,
+                              ),
                             ),
-                          ),
-                          const SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            "Requests",
-                            style: Theme.of(context)
-                                .textTheme
-                                .bodyMedium!
-                                .copyWith(color: context.successColor),
-                          )
-                        ],
+                            const SizedBox(
+                              height: 5,
+                            ),
+                            Text(
+                              "Requests",
+                              style: Theme.of(context)
+                                  .textTheme
+                                  .bodyMedium!
+                                  .copyWith(color: context.successColor),
+                            )
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -127,21 +130,21 @@ class TeacherHomeScreen extends StatelessWidget {
                     color: context.successColor,
                     iconPath: AppIcons.batchLarge,
                     text: AppTexts.createBatch,
-                    onPressed: () => Get.toNamed(RouteNames.studentNotes),
+                    onPressed: () => Get.toNamed(RouteNames.createNewBatch),
                     type: ButtonType.success,
                   ),
                   LargeCardButton(
                     color: context.warningColor,
                     iconPath: AppIcons.arrowTopLeftLarge,
                     text: AppTexts.myBatches,
-                    onPressed: () => Get.toNamed(RouteNames.studentCurriculums),
+                    onPressed: () => Get.toNamed(RouteNames.myBatches),
                     type: ButtonType.warning,
                   ),
                   LargeCardButton(
                     color: context.infoColor,
                     iconPath: AppIcons.microphoneLarge,
                     text: AppTexts.announcements,
-                    onPressed: () => Get.toNamed(RouteNames.studentBlogs),
+                    onPressed: () => Get.toNamed(RouteNames.sendAnnouncements),
                     type: ButtonType.info,
                   ),
                   LargeCardButton(
@@ -149,7 +152,7 @@ class TeacherHomeScreen extends StatelessWidget {
                     iconPath: AppIcons.notificationLarge,
                     text: AppTexts.notifications,
                     onPressed: () =>
-                        Get.toNamed(RouteNames.studentNotifications),
+                        Get.toNamed(RouteNames.teacherNotifications),
                     type: ButtonType.error,
                   ),
                 ],

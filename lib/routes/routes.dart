@@ -27,12 +27,41 @@ import 'package:codenest/student/screens/notifications/student_notifications_scr
 import 'package:codenest/student/screens/saved_blogs/student_saved_blogs_screen.dart';
 import 'package:codenest/student/screens/saved_notes/student_saved_notes_screen.dart';
 import 'package:codenest/student/screens/student_profile/student_profile_screen.dart';
+import 'package:codenest/teacher/bindings/create_curriculum_topic_binding.dart';
+import 'package:codenest/teacher/bindings/create_new_batch_binding.dart';
+import 'package:codenest/teacher/bindings/manage_curriculums_binding.dart';
+import 'package:codenest/teacher/bindings/my_followers_binding.dart';
+import 'package:codenest/teacher/bindings/pending_join_requests_binding.dart';
+import 'package:codenest/teacher/bindings/send_announcements_binding.dart';
+import 'package:codenest/teacher/bindings/teacher_batch_details_binding.dart';
+import 'package:codenest/teacher/bindings/teacher_blog_binding.dart';
+import 'package:codenest/teacher/bindings/teacher_blog_details_binding.dart';
 import 'package:codenest/teacher/bindings/teacher_home_binding.dart';
+import 'package:codenest/teacher/bindings/teacher_own_blog_details_binding.dart';
+import 'package:codenest/teacher/bindings/teacher_profile_binding.dart';
+import 'package:codenest/teacher/bindings/teacher_saved_blogs_binding.dart';
+import 'package:codenest/teacher/bindings/upload_notes_binding.dart';
+import 'package:codenest/teacher/bindings/view_my_batches_binding.dart';
+import 'package:codenest/teacher/screens/batch_details/teacher_batch_details_screen.dart';
+import 'package:codenest/teacher/screens/blog_details/teacher_blog_details_screen.dart';
+import 'package:codenest/teacher/screens/blogs/teacher_blog_screen.dart';
+import 'package:codenest/teacher/screens/create_curriculum_topic/create_curriculum_topic_screen.dart';
 import 'package:codenest/teacher/screens/home/teacher_home_screen.dart';
+import 'package:codenest/teacher/screens/manage_curriculums/manage_curriculums_screen.dart';
+import 'package:codenest/teacher/screens/my_followers/my_followers_screen.dart';
+import 'package:codenest/teacher/screens/own_blog_details/teacher_own_blog_details_Screen.dart';
+import 'package:codenest/teacher/screens/pending_join_requests/pending_join_requests_screen.dart';
+import 'package:codenest/teacher/screens/saved_blogs/teacher_saved_blogs_screen.dart';
+import 'package:codenest/teacher/screens/select_students_for_announcements/select_students_for_announcements_screen.dart';
+import 'package:codenest/teacher/screens/send_announcements/send_announcements_screen.dart';
+import 'package:codenest/teacher/screens/teacher_profile/teacher_profile_screen.dart';
+import 'package:codenest/teacher/screens/upload_notes/upload_notes_screen.dart';
+import 'package:codenest/teacher/screens/view_my_batches/view_my_batches_screen.dart';
 import 'package:get/get.dart';
 
 import '../shared/screens/onboarding/onboarding_screen.dart';
 import '../shared/screens/splash/splash_screen.dart';
+import '../teacher/screens/create_new_batch/create_new_batch_screen.dart';
 
 class Routes {
   static final List<GetPage> pages = [
@@ -122,6 +151,81 @@ class Routes {
       name: RouteNames.teacherHome,
       page: () => const TeacherHomeScreen(),
       binding: TeacherHomeBinding(),
+    ),
+    GetPage(
+      name: RouteNames.pendingJoinRequests,
+      page: () => const PendingJoinRequestsScreen(),
+      binding: PendingJoinRequestsBinding(),
+    ),
+    GetPage(
+      name: RouteNames.createNewBatch,
+      page: () => const CreateNewBatchScreen(),
+      binding: CreateNewBatchBinding(),
+    ),
+    GetPage(
+      name: RouteNames.myBatches,
+      page: () => const ViewMyBatchesScreen(),
+      binding: ViewMyBatchesBinding(),
+    ),
+    GetPage(
+      name: RouteNames.sendAnnouncements,
+      page: () => const SendAnnouncementsScreen(),
+      binding: SendAnnouncementsBinding(),
+    ),
+    GetPage(
+      name: RouteNames.selectStudentsForAnnouncements,
+      page: () => const SelectStudentsForAnnouncementsScreen(),
+      binding: SendAnnouncementsBinding(),
+    ),
+    GetPage(
+      name: RouteNames.teacherBatchDetails,
+      page: () => const TeacherBatchDetailsScreen(),
+      binding: TeacherBatchDetailsBinding(),
+    ),
+    GetPage(
+      name: RouteNames.teacherOwnBlogDetails,
+      page: () => const TeacherOwnBlogDetailsScreen(),
+      binding: TeacherOwnBlogDetailsBinding(),
+    ),
+    GetPage(
+      name: RouteNames.teacherBlogDetails,
+      page: () => const TeacherBlogDetailsScreen(),
+      binding: TeacherBlogDetailsBinding(),
+    ),
+    GetPage(
+      name: RouteNames.createCurriculumTopic,
+      page: () => const CreateCurriculumTopicScreen(),
+      binding: CreateCurriculumTopicBinding(),
+    ),
+    GetPage(
+      name: RouteNames.manageCurriculums,
+      page: () => const ManageCurriculumsScreen(),
+      binding: ManageCurriculumsBinding(),
+    ),
+    GetPage(
+      name: RouteNames.myFollowers,
+      page: () => const MyFollowersScreen(),
+      binding: MyFollowersBinding(),
+    ),
+    GetPage(
+      name: RouteNames.teacherProfile,
+      page: () => const TeacherProfileScreen(),
+      binding: TeacherProfileBinding(),
+    ),
+    GetPage(
+      name: RouteNames.uploadNotes,
+      page: () => const UploadNotesScreen(),
+      binding: UploadNotesBinding(),
+    ),
+    GetPage(
+      name: RouteNames.teacherSavedBlogs,
+      page: () => const TeacherSavedBlogsScreen(),
+      binding: TeacherSavedBlogsBinding(),
+    ),
+    GetPage(
+      name: RouteNames.teacherBlogs,
+      page: () => const TeacherBlogScreen(),
+      binding: TeacherBlogBinding(),
     ),
   ];
 }
